@@ -1,0 +1,19 @@
+import discord
+from discord.ext import commands
+import random
+import os
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+
+@bot.command()
+async def spisok(ctx):
+    await ctx.send(f'Привет! вот советы для экологии: пользуйся многоразовой посудой, сдавай ненужные вещи на переработку, Откажитесь от использования одноразовых стаканчиков, Скажите НЕТ пластиковым пакетам, носите свою экосумку,Откажитесь от одноразовой пластиковой бутылки для воды,Откажитесь от использования ламп накаливания в пользу светодиодных лампочек,  перерабатывай ненужные вещи. Распространяйте этот материал среди своих друзей знакомых. Давайте заботься о природе ведь она очень красива^_^. надоооо Федя надооо')
+
+bot.run("MTA5NzE5OTg3ODMxNDE0Mzc2NA.GLvJ_N.Hb_qe03CP3-Ir76Cja4ArRf-wmVQjHukkRMs9c")
